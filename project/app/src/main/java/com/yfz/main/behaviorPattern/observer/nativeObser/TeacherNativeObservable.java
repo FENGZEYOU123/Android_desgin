@@ -1,4 +1,4 @@
-package com.yfz.main.observerPattern.nativeObser;
+package com.yfz.main.behaviorPattern.observer.nativeObser;
 
 import java.util.Observable;
 

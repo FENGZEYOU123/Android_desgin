@@ -1,4 +1,4 @@
-package com.yfz.main.observerPattern.customObser;
+package com.yfz.main.behaviorPattern.observer.customObser;
 import java.util.ArrayList;
 
 /**

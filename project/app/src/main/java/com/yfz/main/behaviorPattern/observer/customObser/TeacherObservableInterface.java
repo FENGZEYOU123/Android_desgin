@@ -1,4 +1,4 @@
-package com.yfz.main.observerPattern.customObser;
+package com.yfz.main.behaviorPattern.observer.customObser;
 
 /**
  * 创建抽象(被观察者)主题,定义添加,删除,通知等方法：

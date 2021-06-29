@@ -1,4 +1,4 @@
-package com.yfz.main.observerPattern;
+package com.yfz.main.behaviorPattern.observer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,9 +14,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.yfz.main.R;
-import com.yfz.main.observerPattern.customObser.StudentObserver;
-import com.yfz.main.observerPattern.customObser.TeacherObservable;
-import com.yfz.main.observerPattern.nativeObser.TeacherNativeObservable;
+import com.yfz.main.behaviorPattern.observer.customObser.StudentObserver;
+import com.yfz.main.behaviorPattern.observer.customObser.TeacherObservable;
 
 import java.util.ArrayList;
 

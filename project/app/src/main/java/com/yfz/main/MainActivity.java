@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.yfz.main.observerPattern.ObserverPatternActivity;
+import com.yfz.main.behaviorPattern.observer.ObserverPatternActivity;
 
 public class MainActivity extends AppCompatActivity {
 
