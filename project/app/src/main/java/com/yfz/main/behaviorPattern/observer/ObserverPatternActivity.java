@@ -35,6 +35,7 @@ import java.util.ArrayList;
  * (3).当被观察者自身改变时，需要一个方法来通知所有的观察者，如notifyChanged
  *
  * Reference:https://www.cnblogs.com/mythou/p/3370340.html
+ * http://c.biancheng.net/view/1390.html
  */
 
 public class ObserverPatternActivity extends AppCompatActivity {
