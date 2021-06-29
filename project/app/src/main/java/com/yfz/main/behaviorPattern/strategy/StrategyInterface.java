@@ -3,6 +3,6 @@ package com.yfz.main.behaviorPattern.strategy;
 /**
  * 创建抽象策略方法
  */
-public interface CalculateStrategyInterface {
+public interface StrategyInterface {
     int doOperation(int num1,int num2); //执行方法
 }
