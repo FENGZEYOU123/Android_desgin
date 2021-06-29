@@ -64,6 +64,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
         </Button>
+
+        <Button
+            android:id="@+id/vButtonRemove"
+            android:text="随机移除一个观察者"
+            app:layout_constraintTop_toBottomOf="@+id/vButton"
+            android:background="#EF2222"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Button>
+        <TextView
+            android:id="@+id/vTvRemovedStudent"
+            app:layout_constraintTop_toBottomOf="@+id/vButtonRemove"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

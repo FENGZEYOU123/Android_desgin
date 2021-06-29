@@ -30,7 +30,8 @@ public class ObserverPatternActivity extends AppCompatActivity {
     private MyAdapter mMyAdapter;
     private ArrayList<StudentObserver> mStudentList = new ArrayList<>();
     private EditText vEditText;
-    private Button vButton;
+    private TextView vTvRemovedStudent;
+    private Button vButton,vButtonRemove;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,8 @@ public class ObserverPatternActivity extends AppCompatActivity {
         vRecyclerView.setAdapter(mMyAdapter);
         vEditText = findViewById(R.id.vEditText);
         vButton = findViewById(R.id.vButton);
+        vButtonRemove = findViewById(R.id.vButtonRemove);
+        vTvRemovedStudent = findViewById(R.id.vTvRemovedStudent);
     }
 
     private void addStudent(){
@@ -60,14 +63,21 @@ public class ObserverPatternActivity extends AppCompatActivity {
         StudentObserver studentObserver3 = new StudentObserver("张三");
         mStudentList.add(studentObserver3);
         mTeacherObservable.addStudent(studentObserver3);
+        StudentObserver studentObserver4 = new StudentObserver("李四");
+        mStudentList.add(studentObserver4);
+        mTeacherObservable.addStudent(studentObserver4);
     }
     private void addSendNotifyHandler(){
-        vButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               mTeacherObservable.notifyToStudent(vEditText.getText().toString().trim());
-               mMyAdapter.notifyDataSetChanged();
-            }
+        //改变（被观察者的）自身状态，让观察者监听到改变事件
+        vButton.setOnClickListener(v -> {
+           mTeacherObservable.notifyToStudent(vEditText.getText().toString().trim());
+           mMyAdapter.notifyDataSetChanged();
+        });
+        //随机移除一个观察者(移除一个学生)
+        vButtonRemove.setOnClickListener(v->{
+            int index =((int)(Math.random()*mStudentList.size()-1)+0);
+            mTeacherObservable.removeStudent(mStudentList.get(index));
+            vTvRemovedStudent.setText("观察者学生 "+mStudentList.get(index).getStudentName()+" 被移除"+"\n被观察者（老师）发送事件后，该名学生会监听不到数据的改变");
         });
     }
 
