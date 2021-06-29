@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * ConcreteSubject
  */
 public class TeacherObservable implements TeacherObservableInterface {
+    //Container容器
     private ArrayList<StudentObserverInterface> personList = new ArrayList<StudentObserverInterface>();//保存收件人（观察者）的信息
 
     @Override
