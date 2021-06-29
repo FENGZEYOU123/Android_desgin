@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,89 +41,30 @@ import java.util.ArrayList;
 
 public class ObserverPatternActivity extends AppCompatActivity {
     private TeacherObservable mTeacherObservable = new TeacherObservable();
-    private RecyclerView vRecyclerView;
-    private RecyclerView.LayoutManager mLayoutManager;
-    private MyAdapter mMyAdapter;
-    private ArrayList<StudentObserver> mStudentList = new ArrayList<>();
-    private EditText vEditText;
-    private TextView vTvRemovedStudent;
-    private Button vButton,vButtonRemove;
+    public static String TAG ="观察者模式：>> ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_observer_pattern);
         addStudent();
-        initial();
-        addSendNotifyHandler();
-    }
-    private void initial(){
-        vRecyclerView = findViewById(R.id.vRecyclerView);
-        mLayoutManager = new LinearLayoutManager(this);
-        mMyAdapter = new MyAdapter(mStudentList);
-        vRecyclerView.setLayoutManager(mLayoutManager);
-        vRecyclerView.setAdapter(mMyAdapter);
-        vEditText = findViewById(R.id.vEditText);
-        vButton = findViewById(R.id.vButton);
-        vButtonRemove = findViewById(R.id.vButtonRemove);
-        vTvRemovedStudent = findViewById(R.id.vTvRemovedStudent);
+        removeStudent();
+        teacherNotify();
     }
 
     private void addStudent(){
-        StudentObserver studentObserver1 = new StudentObserver("小红");
-        mStudentList.add(studentObserver1);
+        StudentObserver studentObserver1 = new StudentObserver("小红",true);
         mTeacherObservable.addStudent(studentObserver1);
-        StudentObserver studentObserver2 = new StudentObserver("李明");
-        mStudentList.add(studentObserver2);
+        StudentObserver studentObserver2 = new StudentObserver("李明",false);
         mTeacherObservable.addStudent(studentObserver2);
-        StudentObserver studentObserver3 = new StudentObserver("张三");
-        mStudentList.add(studentObserver3);
+        StudentObserver studentObserver3 = new StudentObserver("张三",false);
         mTeacherObservable.addStudent(studentObserver3);
-        StudentObserver studentObserver4 = new StudentObserver("李四");
-        mStudentList.add(studentObserver4);
-        mTeacherObservable.addStudent(studentObserver4);
     }
-    private void addSendNotifyHandler(){
-        //改变（被观察者的）自身状态，让观察者监听到改变事件
-        vButton.setOnClickListener(v -> {
-           mTeacherObservable.notifyToStudent(vEditText.getText().toString().trim());
-           mMyAdapter.notifyDataSetChanged();
-        });
-        //随机移除一个观察者(移除一个学生)
-        vButtonRemove.setOnClickListener(v->{
-            int index =((int)(Math.random()*mStudentList.size()-1)+0);
-            mTeacherObservable.removeStudent(mStudentList.get(index));
-            vTvRemovedStudent.setText("观察者学生 "+mStudentList.get(index).getStudentName()+" 被移除"+"\n被观察者（老师）发送事件后，该名学生会监听不到数据的改变");
-        });
+    private void teacherNotify(){
+        Log.d(TAG, "老师开会，并发布通知到所有学生: ");
+        mTeacherObservable.notifyToStudent("老师去开会了,班长管一下班级");
     }
-
-    class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyHolder>{
-        private ArrayList<StudentObserver> mArrayList = new ArrayList();
-        public MyAdapter(ArrayList list){
-            mArrayList = list;
-        }
-        @NonNull
-        @Override
-        public MyAdapter.MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            return new MyHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_observer_item,parent,false));
-        }
-
-        @Override
-        public void onBindViewHolder(@NonNull MyAdapter.MyHolder holder, int position) {
-            holder.vTextView.setText(mArrayList.get(position).getStudentName()+"\n"+mArrayList.get(position).getEventFromTeacher());
-        }
-
-        @Override
-        public int getItemCount() {
-            return mArrayList.size();
-        }
-
-        class MyHolder extends RecyclerView.ViewHolder{
-            public TextView vTextView;
-            public MyHolder(@NonNull  View itemView) {
-                super(itemView);
-                vTextView = itemView.findViewById(R.id.vTextView);
-            }
-        }
+    private void removeStudent(){
+        mTeacherObservable.removeStudent(mTeacherObservable.getStudentList().get(2));
     }
 }

@@ -1,91 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="24dp"
     tools:context=".behaviorPattern.observer.ObserverPatternActivity">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/vTvObserverTitle"
-            android:text="观察者,班级内的学生\nStudentObserver"
-            android:gravity="center"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </TextView>
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/vRecyclerView"
-            app:layout_constraintTop_toBottomOf="@+id/vTvObserverTitle"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="0dp">
-        </androidx.recyclerview.widget.RecyclerView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/vTvObservableTitle"
-            android:text="被观察者，老师\nTeacherObservable"
-            android:gravity="center"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </TextView>
-        <EditText
-            android:id="@+id/vEditText"
-            app:layout_constraintTop_toBottomOf="@+id/vTvObservableTitle"
-            android:gravity="center"
-            android:background="#23DF"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </EditText>
-        <Button
-            android:id="@+id/vButton"
-            android:text="发送全部学生消息"
-            app:layout_constraintTop_toBottomOf="@+id/vEditText"
-            android:layout_marginTop="20dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </Button>
-
-        <Button
-            android:id="@+id/vButtonRemove"
-            android:text="随机移除一个观察者"
-            app:layout_constraintTop_toBottomOf="@+id/vButton"
-            android:background="#EF2222"
-            android:layout_marginTop="20dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </Button>
-        <TextView
-            android:id="@+id/vTvRemovedStudent"
-            app:layout_constraintTop_toBottomOf="@+id/vButtonRemove"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </TextView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </LinearLayout>

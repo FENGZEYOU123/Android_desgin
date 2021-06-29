@@ -6,5 +6,5 @@ package com.yfz.main.behaviorPattern.observer.customObser;
  * Observer
  */
 public interface StudentObserverInterface {
-    public void receivedNotifyFromTeacher(String msg);
+    void receivedNotifyFromTeacher(String msg);
 }
