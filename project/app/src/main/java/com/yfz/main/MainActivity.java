@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import com.yfz.main.behaviorPattern.observer.ObserverPatternActivity;
+import com.yfz.main.behaviorPattern.strategy.StrategyPatternActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,5 +17,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void doObserverPattern(View view){
         startActivity(new Intent(MainActivity.this, ObserverPatternActivity.class));
+    }
+    public void doStrategyPattern(View view){
+        startActivity(new Intent(MainActivity.this, StrategyPatternActivity.class));
     }
 }
