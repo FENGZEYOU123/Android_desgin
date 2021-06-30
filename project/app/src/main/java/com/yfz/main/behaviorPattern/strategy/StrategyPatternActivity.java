@@ -30,5 +30,4 @@ public class StrategyPatternActivity extends AppCompatActivity {
         System.out.println("策略模式:>> 除法>> "+mStrategyContext.doCalculate(num1,num2));
 
     }
-
 }
