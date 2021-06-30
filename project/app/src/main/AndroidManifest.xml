@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Main">
-        <activity android:name=".behaviorPattern.strategy.StrategyPatternActivity"></activity>
+        <activity
+            android:name=".creationalPattern.build.BuildPatternActivity"
+            android:exported="true" />
+        <activity android:name=".behaviorPattern.strategy.StrategyPatternActivity" />
         <activity android:name=".behaviorPattern.observer.ObserverPatternActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

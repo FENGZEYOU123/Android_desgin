@@ -26,5 +26,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
         </TextView>
+        <TextView
+            android:text="建造者模式"
+            android:layout_margin="10dp"
+            android:onClick="doBuildPattern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
     </GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

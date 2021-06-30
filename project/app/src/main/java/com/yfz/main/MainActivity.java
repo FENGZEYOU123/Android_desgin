@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import com.yfz.main.behaviorPattern.observer.ObserverPatternActivity;
 import com.yfz.main.behaviorPattern.strategy.StrategyPatternActivity;
+import com.yfz.main.creationalPattern.build.BuildPatternActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,4 +22,8 @@ public class MainActivity extends AppCompatActivity {
     public void doStrategyPattern(View view){
         startActivity(new Intent(MainActivity.this, StrategyPatternActivity.class));
     }
+    public void doBuildPattern(View view){
+        startActivity(new Intent(MainActivity.this, BuildPatternActivity.class));
+    }
+
 }
