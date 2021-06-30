@@ -27,12 +27,10 @@ public class MealBuilder {
 
     //展示套餐内所有商品信息
     public void showItems(){
-        System.out.print("建造者模式:>> 您的套餐包含如下食品>> ");
+        System.out.println("建造者模式:>> 您的套餐包含如下食品>> ");
         for (FoodItem item : itemsList) {
-            System.out.print("建造者模式:>> 名字:>> "+item.foodName());
-            System.out.print("建造者模式:>> 包装:>> "+item.foodPackingStyle());
-            System.out.println("建造者模式:>> 单价:>> "+item.foodPrice());
+            System.out.println("建造者模式:>> 名字："+item.foodName()+" 包装："+item.foodPackingStyle().packStyle()+" 单价："+item.foodPrice());
         }
-        System.out.print("建造者模式:>> 您需要支付总价为 "+getCost()+" RMB");
+        System.out.println("建造者模式:>> 您需要支付总价为 "+getCost()+" RMB");
     }
 }
