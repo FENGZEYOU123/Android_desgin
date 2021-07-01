@@ -6,7 +6,6 @@ import com.yfz.main.R;
 import com.yfz.main.creationalPattern.builder.foodProduct.HotSpicyChickenBurger;
 
 public class BuildPatternActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

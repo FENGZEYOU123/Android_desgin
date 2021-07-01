@@ -10,10 +10,8 @@ public class BigMacBurger extends FoodBurger {
     public String foodName() {
         return "巨无霸汉堡";
     }
-
     @Override
     public float foodPrice() {
         return 27;
     }
-
 }

@@ -11,7 +11,6 @@ public class CocaColaDrink extends FoodDrink {
     public String foodName() {
         return "可口可乐";
     }
-
     @Override
     public float foodPrice() {
         return 10;

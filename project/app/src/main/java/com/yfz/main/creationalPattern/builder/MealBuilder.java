@@ -52,6 +52,5 @@ public class MealBuilder {
         }
         System.out.println("建造者模式:>> 您需要支付总价为 "+getCost()+" RMB。");
         System.out.println("建造者模式:>> 结束。");
-
     }
 }

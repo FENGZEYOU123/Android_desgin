@@ -13,5 +13,4 @@ public interface FoodItem {
     FoodPackingStyle foodPackingStyle();
     //食物价格
     float foodPrice();
-
 }

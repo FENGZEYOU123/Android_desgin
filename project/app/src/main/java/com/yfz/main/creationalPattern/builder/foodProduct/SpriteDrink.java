@@ -10,7 +10,6 @@ public class SpriteDrink extends FoodDrink {
     public String foodName() {
         return "雪碧";
     }
-
     @Override
     public float foodPrice() {
         return 10;
