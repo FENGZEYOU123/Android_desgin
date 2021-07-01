@@ -23,6 +23,5 @@ public class FactoryMethodPatternActivity extends AppCompatActivity {
         //创建猪工厂-生产猪肉
         Factory factoryB = new PorkFactory();
         System.out.println(TAG+"生产的产品是:>> "+ factoryB.createProduct().make());
-
     }
 }

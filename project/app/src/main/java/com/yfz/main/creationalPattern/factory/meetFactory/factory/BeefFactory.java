@@ -6,7 +6,7 @@ import com.yfz.main.creationalPattern.factory.meetFactory.product.MeetProduct;
 import com.yfz.main.creationalPattern.factory.meetFactory.product.PorkProduct;
 
 /**
- * 将简单工厂，拆分成2个子工厂- 牛肉工厂
+ * 牛肉工厂-实现母工厂抽象类
  */
 public class BeefFactory extends Factory{
     public BeefFactory(){
