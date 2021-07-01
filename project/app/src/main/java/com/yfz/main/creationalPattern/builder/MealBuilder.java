@@ -20,18 +20,21 @@ public class MealBuilder {
         this.name = name;
     }
     //香辣鸡腿堡套餐内必须含有一个【香辣鸡腿堡】，一杯【可乐】
-    public void hotSpicyChickenBurgerMealComb(){
+    public MealBuilder hotSpicyChickenBurgerMealComb(){
         itemsList.add(new HotSpicyChickenBurger());
         itemsList.add(new CocaColaDrink());
+        return this;
     }
     //巨无霸套餐内必须含有一个【巨无霸汉堡】，一杯【雪碧】
-    public void bigMacBurgerMealComb(){
+    public MealBuilder bigMacBurgerMealComb(){
         itemsList.add(new BigMacBurger());
         itemsList.add(new SpriteDrink());
+        return this;
     }
     //对外提供添加食物商品的方法，如果客人觉得不够可自由添加其他食品
-    public void addFoodProduct(FoodItem foodItem){
+    public MealBuilder addFoodProduct(FoodItem foodItem){
         itemsList.add(foodItem);
+        return this;
     }
     //计算价格
     private float getCost(){

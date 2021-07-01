@@ -14,15 +14,12 @@ public class BuildPatternActivity extends AppCompatActivity {
         /**
          * 小明 开始点餐-> 选择了一份【香辣鸡腿堡套餐】-> 买单
          */
-        MealBuilder mealBuilderA = new MealBuilder("小明");
-        mealBuilderA.hotSpicyChickenBurgerMealComb();
+        MealBuilder mealBuilderA = new MealBuilder("小明").hotSpicyChickenBurgerMealComb();
         mealBuilderA.doCheck();
         /**
          * 王老二 开始点餐-> 选择了一份【巨无霸汉堡套餐】-> 感觉不够吃，又点了单个【香辣鸡腿堡】->买单
          */
-        MealBuilder mealBuilderB = new MealBuilder("王老二");
-        mealBuilderB.bigMacBurgerMealComb();
-        mealBuilderB.addFoodProduct(new HotSpicyChickenBurger());
+        MealBuilder mealBuilderB = new MealBuilder("王老二").bigMacBurgerMealComb().addFoodProduct(new HotSpicyChickenBurger());
         mealBuilderB.doCheck();
     }
 }
