@@ -1,6 +1,6 @@
-package com.yfz.main.creationalPattern.build.foodItem;
+package com.yfz.main.creationalPattern.builder.foodItem;
 
-import com.yfz.main.creationalPattern.build.foodPackStyle.FoodPackingStyle;
+import com.yfz.main.creationalPattern.builder.foodPackStyle.FoodPackingStyle;
 
 /**
  * 食物商品的抽象类

@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import com.yfz.main.behaviorPattern.observer.ObserverPatternActivity;
 import com.yfz.main.behaviorPattern.strategy.StrategyPatternActivity;
-import com.yfz.main.creationalPattern.build.BuildPatternActivity;
+import com.yfz.main.creationalPattern.builder.BuildPatternActivity;
 
 public class MainActivity extends AppCompatActivity {
 

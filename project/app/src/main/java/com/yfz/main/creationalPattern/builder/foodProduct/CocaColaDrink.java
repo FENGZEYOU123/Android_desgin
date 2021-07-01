@@ -1,7 +1,7 @@
-package com.yfz.main.creationalPattern.build.foodProduct;
+package com.yfz.main.creationalPattern.builder.foodProduct;
 
 
-import com.yfz.main.creationalPattern.build.foodItem.FoodDrink;
+import com.yfz.main.creationalPattern.builder.foodItem.FoodDrink;
 
 /**
  * 可口可乐-食物商品-饮料-的具体实现类

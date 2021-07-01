@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Main">
         <activity
-            android:name=".creationalPattern.build.BuildPatternActivity"
+            android:name=".creationalPattern.builder.BuildPatternActivity"
             android:exported="true" />
         <activity android:name=".behaviorPattern.strategy.StrategyPatternActivity" />
         <activity android:name=".behaviorPattern.observer.ObserverPatternActivity" />

@@ -1,8 +1,8 @@
-package com.yfz.main.creationalPattern.build.foodItem;
+package com.yfz.main.creationalPattern.builder.foodItem;
 
 
-import com.yfz.main.creationalPattern.build.foodPackStyle.FoodPackingStyle;
-import com.yfz.main.creationalPattern.build.foodPackStyle.WrapperPacking;
+import com.yfz.main.creationalPattern.builder.foodPackStyle.FoodPackingStyle;
+import com.yfz.main.creationalPattern.builder.foodPackStyle.WrapperPacking;
 
 /**
  * 食物-汉堡-抽象类（汉堡可以有许多种）

@@ -1,7 +1,7 @@
-package com.yfz.main.creationalPattern.build.foodItem;
+package com.yfz.main.creationalPattern.builder.foodItem;
 
-import com.yfz.main.creationalPattern.build.foodPackStyle.FoodPackingStyle;
-import com.yfz.main.creationalPattern.build.foodPackStyle.WrapperPacking;
+import com.yfz.main.creationalPattern.builder.foodPackStyle.FoodPackingStyle;
+import com.yfz.main.creationalPattern.builder.foodPackStyle.WrapperPacking;
 
 /**
  * 食物-饮料-抽象类（饮料可以有许多种）
