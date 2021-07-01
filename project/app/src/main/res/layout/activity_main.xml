@@ -36,7 +36,7 @@
         <TextView
             android:text="简单工厂模式"
             android:layout_margin="10dp"
-            android:onClick="doSimpleFactoryPattern"
+            android:onClick="doSimpleFdactoryPattern"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
         </TextView>

@@ -19,9 +19,10 @@ public class FactoryMethodPatternActivity extends AppCompatActivity {
         setContentView(R.layout.activity_factory_method_pattern);
         //创建牛肉工厂-生产牛肉
         Factory factoryA = new BeefFactory();
-        factoryA.createProduct().make();
+        System.out.println(TAG+"生产的产品是:>> "+ factoryA.createProduct().make());
         //创建猪工厂-生产猪肉
         Factory factoryB = new PorkFactory();
-        factoryB.createProduct().make();
+        System.out.println(TAG+"生产的产品是:>> "+ factoryB.createProduct().make());
+
     }
 }
