@@ -7,6 +7,7 @@ import android.view.View;
 import com.yfz.main.behaviorPattern.observer.ObserverPatternActivity;
 import com.yfz.main.behaviorPattern.strategy.StrategyPatternActivity;
 import com.yfz.main.creationalPattern.builder.BuildPatternActivity;
+import com.yfz.main.creationalPattern.factory.AbstractFactoryPatternActivity;
 import com.yfz.main.creationalPattern.factory.FactoryMethodPatternActivity;
 import com.yfz.main.creationalPattern.factory.SimpleFactoryPatternActivity;
 
@@ -32,5 +33,8 @@ public class MainActivity extends AppCompatActivity {
     }
     public void doFactoryMethodPattern(View view){
         startActivity(new Intent(MainActivity.this, FactoryMethodPatternActivity.class));
+    }
+    public void doAbstractPattern(View view){
+        startActivity(new Intent(MainActivity.this, AbstractFactoryPatternActivity.class));
     }
 }
