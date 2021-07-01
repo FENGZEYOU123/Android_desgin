@@ -22,6 +22,5 @@ public class AbstractFactoryPatternActivity extends AppCompatActivity {
         AbstractFactory factory = new PorkAbstractFactory();
         System.out.println(TAG+"生产的产品是:>> "+ factory.createProduct().make());
         System.out.println(TAG+"同时还能生产指定产品:>> "+ factory.createProductPart().make());
-
     }
 }
