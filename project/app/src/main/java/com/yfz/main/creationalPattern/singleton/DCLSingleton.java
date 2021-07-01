@@ -1,4 +1,4 @@
-package com.yfz.main.creationalPattern.Singleton;
+package com.yfz.main.creationalPattern.singleton;
 
 /**
  * 双检锁/双重校验锁

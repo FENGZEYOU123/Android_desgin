@@ -10,6 +10,7 @@ import com.yfz.main.creationalPattern.builder.BuildPatternActivity;
 import com.yfz.main.creationalPattern.factory.AbstractFactoryPatternActivity;
 import com.yfz.main.creationalPattern.factory.FactoryMethodPatternActivity;
 import com.yfz.main.creationalPattern.factory.SimpleFactoryPatternActivity;
+import com.yfz.main.creationalPattern.singleton.SingletonPatternActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,5 +37,8 @@ public class MainActivity extends AppCompatActivity {
     }
     public void doAbstractPattern(View view){
         startActivity(new Intent(MainActivity.this, AbstractFactoryPatternActivity.class));
+    }
+    public void doSingletonPattern(View view){
+        startActivity(new Intent(MainActivity.this, SingletonPatternActivity.class));
     }
 }

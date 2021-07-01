@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Main">
-        <activity android:name=".creationalPattern.Singleton.SingletonPatternActivity"></activity>
+        <activity android:name=".creationalPattern.singleton.SingletonPatternActivity"></activity>
         <activity android:name=".creationalPattern.factory.AbstractFactoryPatternActivity" />
         <activity android:name=".creationalPattern.factory.FactoryMethodPatternActivity" />
         <activity android:name=".creationalPattern.factory.SimpleFactoryPatternActivity" />
