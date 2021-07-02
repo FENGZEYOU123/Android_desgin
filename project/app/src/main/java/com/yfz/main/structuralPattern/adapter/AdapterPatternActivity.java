@@ -25,8 +25,8 @@ public class AdapterPatternActivity extends AppCompatActivity {
         Printer printerA = new Printer(cnVoltage);
         //打印机配置好220V电压后，就可以工作了
         printerA.doConnect();
-
-        System.out.println("\n"+AdapterPatternActivity.TAG+"小明带着打印机飞到了美国:>>");
+        System.out.println(AdapterPatternActivity.TAG+" ");
+        System.out.println(AdapterPatternActivity.TAG+"小明带着打印机飞到了美国:>>");
         //获取美国电压器120V
         USAVoltage usaVoltage = new USAVoltageImpl();
         //装一个电压适配器,将美国的电压120装进去
@@ -35,8 +35,5 @@ public class AdapterPatternActivity extends AppCompatActivity {
         Printer printer = new Printer(voltageAdapter);
         //打印机配置好120V电压后，就可以工作了
         printer.doConnect();
-
-
-
     }
 }
