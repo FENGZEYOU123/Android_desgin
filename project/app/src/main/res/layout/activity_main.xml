@@ -68,5 +68,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
         </TextView>
+        <TextView
+            android:text="代理模式"
+            android:layout_margin="10dp"
+            android:onClick="doProxyPattern"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </TextView>
     </GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
