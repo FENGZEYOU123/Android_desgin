@@ -12,6 +12,7 @@ import com.yfz.main.creationalPattern.factory.FactoryMethodPatternActivity;
 import com.yfz.main.creationalPattern.factory.SimpleFactoryPatternActivity;
 import com.yfz.main.creationalPattern.singleton.SingletonPatternActivity;
 import com.yfz.main.structuralPattern.adapter.AdapterPatternActivity;
+import com.yfz.main.structuralPattern.decorator.DecoratorPatternActivity;
 import com.yfz.main.structuralPattern.proxy.ProxyPatternActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -48,5 +49,8 @@ public class MainActivity extends AppCompatActivity {
     }
     public void doProxyPattern(View view){
         startActivity(new Intent(MainActivity.this, ProxyPatternActivity.class));
+    }
+    public void doDecoratorPattern(View view){
+        startActivity(new Intent(MainActivity.this, DecoratorPatternActivity.class));
     }
 }
