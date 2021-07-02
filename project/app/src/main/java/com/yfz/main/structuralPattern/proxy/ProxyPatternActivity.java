@@ -8,7 +8,6 @@ import com.yfz.main.R;
 
 public class ProxyPatternActivity extends AppCompatActivity {
     public static String TAG = "代理模式:>> ";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +23,5 @@ public class ProxyPatternActivity extends AppCompatActivity {
         proxyConductor.purchase("北京",2);
         //小明询问总售票站在哪（通过代理售票站提供的方法，由于代理售票站有总售票站的所有信息，所以可以回答）
         proxyConductor.askWhereIsMainConductor();
-
     }
 }
